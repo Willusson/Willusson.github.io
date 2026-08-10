@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 720" width="1024" height="720" role="img" aria-label="Электрический питбайк KUGOO WISH 2 PRO">
+  <defs>
+    <linearGradient id="bgS" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e1440"/>
+      <stop offset="55%" stop-color="#1a1f52"/>
+      <stop offset="100%" stop-color="#0a0d2e"/>
+    </linearGradient>
+    <linearGradient id="frameS" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5ad2ff"/>
+      <stop offset="55%" stop-color="#8a6bff"/>
+      <stop offset="100%" stop-color="#ff3d7f"/>
+    </linearGradient>
+    <radialGradient id="hub" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#cfe6ff"/>
+      <stop offset="100%" stop-color="#7db4e8"/>
+    </radialGradient>
+    <linearGradient id="tire" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2f4d"/>
+      <stop offset="100%" stop-color="#141833"/>
+    </linearGradient>
+  </defs>
+
+  <!-- фон -->
+  <rect width="1024" height="720" rx="32" fill="url(#bgS)"/>
+  <circle cx="898" cy="90" r="190" fill="#ff3d7f" opacity="0.16"/>
+  <circle cx="120" cy="620" r="230" fill="#5ad2ff" opacity="0.14"/>
+  <path d="M0 620 L1024 620" stroke="#8a6bff" opacity="0.3" stroke-width="2"/>
+
+  <!-- заднее колесо 17" -->
+  <circle cx="300" cy="560" r="150" fill="none" stroke="url(#frameS)" stroke-width="6" opacity="0.55"/>
+  <circle cx="300" cy="560" r="120" fill="url(#tire)" stroke="#3a4166" stroke-width="8"/>
+  <circle cx="300" cy="560" r="30" fill="url(#hub)"/>
+  <circle cx="300" cy="560" r="42" fill="none" stroke="#3a4166" stroke-width="6"/>
+  <g stroke="#2f3457" stroke-width="6">
+    <line x1="300" y1="120" x2="300" y2="200"/><line x1="120" y1="200" x2="300" y2="200"/>
+  </g>
+
+  <!-- переднее колесо 19" (больше) -->
+  <circle cx="724" cy="516" r="168" fill="none" stroke="url(#frameS)" stroke-width="6" opacity="0.55"/>
+  <circle cx="724" cy="516" r="136" fill="url(#tire)" stroke="#3a4166" stroke-width="9"/>
+  <circle cx="724" cy="516" r="34" fill="url(#hub)"/>
+  <circle cx="724" cy="516" r="48" fill="none" stroke="#3a4166" stroke-width="7"/>
+
+  <!-- рама -->
+  <g fill="none" stroke="url(#frameS)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M300 440 L470 340 L620 420 L724 516"/>
+    <path d="M470 340 L520 435 L560 425"/>
+    <path d="M300 440 L300 560"/>
+    <path d="M724 516 L724 430"/>
+  </g>
+  <!-- подножка -->
+  <line x1="560" y1="425" x2="470" y2="470" stroke="#8a6bff" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- вилка -->
+  <line x1="724" y1="430" x2="724" y2="290" stroke="#5ad2ff" stroke-width="16" stroke-linecap="round"/>
+
+  <!-- руль -->
+  <path d="M724 290 L770 250" stroke="#5ad2ff" stroke-width="16" stroke-linecap="round"/>
+  <path d="M660 290 L760 260" stroke="#5ad2ff" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="660" cy="290" r="16" fill="#ff3d7f"/>
+  <circle cx="770" cy="250" r="16" fill="#5ad2ff"/>
+
+  <!-- сиденье -->
+  <rect x="430" y="318" width="120" height="30" rx="15" fill="#ff3d7f" opacity="0.9"/>
+
+  <!-- батарея -->
+  <rect x="455" y="352" width="80" height="26" rx="10" fill="#8a6bff" opacity="0.85"/>
+  <rect x="455" y="352" width="80" height="4" rx="2" fill="#c9aaff" opacity="0.7"/>
+
+  <!-- фара -->
+  <circle cx="700" cy="352" r="20" fill="#fff7c0" opacity="0.95"/>
+
+  <!-- блики -->
+  <path d="M300 500 L724 380" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.12"/>
+
+  <!-- подпись -->
+  <text x="512" y="120" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="800" fill="#eef2ff">
+    WISH 02 PRO
+  </text>
+  <text x="512" y="168" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" fill="#5ad2ff">
+    KUGOO WISH 2 PRO
+  </text>
+
+  <!-- характеристики -->
+  <g font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" text-anchor="middle" fill="#b3bcf5">
+    <text x="512" y="700">до 70 км/ч · 250 Вт · 2700 mAh</text>
+    <text x="512" y="732">до 60 км · 19″/17″ · макс. нагрузка 150 кг</text>
+  </g>
+</svg>
