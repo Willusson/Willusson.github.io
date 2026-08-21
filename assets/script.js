@@ -2,7 +2,6 @@
 (function () {
   'use strict';
 
-  // ----- DOM references -----
   var stage = document.getElementById('stage');
   var steps = Array.prototype.slice.call(document.querySelectorAll('.step'));
   var header = document.getElementById('appHeader');
@@ -20,13 +19,10 @@
   var modalClose = document.getElementById('modalClose');
   var modalOkBtn = document.getElementById('modalOkBtn');
   var lastFocused = null;
-
-  // ----- State -----
   var current = 0;
   var total = steps.length;
   var transitioning = false;
 
-  // ----- Step management -----
   function setActive(index) {
     steps.forEach(function (el, i) {
       el.classList.toggle('step--active', i === index);
@@ -50,7 +46,6 @@
   function next() { goToStep(current + 1); }
   function prev() { goToStep(current - 1); }
 
-  // ----- Progress -----
   function updateProgress() {
     var pct = Math.round((current / (total - 1)) * 100);
     progressFill.style.width = pct + '%';
@@ -63,7 +58,6 @@
     nextBtn.style.visibility = current >= total - 1 ? 'hidden' : 'visible';
   }
 
-  // ----- Start / restart -----
   function startShow() {
     header.hidden = false;
     nav.hidden = false;
@@ -80,7 +74,6 @@
     updateNav();
   }
 
-  // ----- Modal -----
   var modalTitle = document.getElementById('modalTitle');
   var modalBody = document.getElementById('modalBody');
   var modalHighlight = document.getElementById('modalHighlight');
@@ -103,14 +96,12 @@
     if (lastFocused && lastFocused.focus) lastFocused.focus();
   }
 
-  // ----- Events -----
   startBtn.addEventListener('click', startShow);
   restartBtn.addEventListener('click', restart);
 
   backBtn.addEventListener('click', prev);
   nextBtn.addEventListener('click', next);
 
-  // keyboard navigation
   window.addEventListener('keydown', function (e) {
     if (!modalOverlay.hidden) {
       if (e.key === 'Escape') {
@@ -126,14 +117,13 @@
     }
   });
 
-  // modal close via background click
+
   modalOverlay.addEventListener('click', function (e) {
     if (e.target === modalOverlay) closeModal();
   });
   modalClose.addEventListener('click', closeModal);
   modalOkBtn.addEventListener('click', closeModal);
 
-  // all CTA "buy" buttons open the modal
   var ctaButtons = document.querySelectorAll('.cta-buy');
   ctaButtons.forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -141,7 +131,6 @@
     });
   });
 
-  // "Все же нет" button opens its own message
   if (noBtn) {
     noBtn.addEventListener('click', function () {
       openModal('Все же нет', 'Мы готовы к любым переговорам и обсуждениям');

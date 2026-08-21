@@ -26,7 +26,6 @@ body{
   min-height:100dvh;overflow:hidden;
   -webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased;
 }
-/* ---------- Фон: свечения и линии ---------- */
 .bg-glow{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
 .glow{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55}
 .glow--blue{width:420px;height:420px;background:radial-gradient(circle,#1f8cff 0%,transparent 70%);top:-120px;left:-90px}
@@ -41,7 +40,6 @@ body{
   mask-image:radial-gradient(circle at 50% 40%,#000 0%,transparent 75%);
   -webkit-mask-image:radial-gradient(circle at 50% 40%,#000 0%,transparent 75%);
 }
-/* ---------- Header / прогресс ---------- */
 .app-header{
   position:fixed;top:0;left:0;right:0;z-index:20;
   padding:calc(14px + env(safe-area-inset-top)) 20px 10px;
@@ -52,7 +50,6 @@ body{
 .progress-track{flex:1;height:8px;border-radius:99px;overflow:hidden;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.12)}
 .progress-fill{height:100%;width:0%;border-radius:99px;background:var(--grad-main);transition:width .55s var(--ease);box-shadow:0 0 14px rgba(90,210,255,.55)}
 .progress-label{font-size:12px;font-weight:700;letter-spacing:.3px;color:var(--c-mut);min-width:74px;text-align:right;font-variant-numeric:tabular-nums}
-/* ---------- Сцена и шаги ---------- */
 .stage{position:relative;z-index:1;height:100dvh;display:flex;align-items:center;justify-content:center;padding:88px 18px 96px}
 .step{
   position:absolute;inset:0;width:100%;height:100%;
@@ -66,14 +63,12 @@ body{
 .step--active{opacity:1;visibility:visible;pointer-events:auto;transform:translate3d(0,0,0) scale(1);transition:opacity .5s var(--ease),transform .5s var(--ease),visibility 0s 0s}
 .step--prev{opacity:0;visibility:hidden;pointer-events:none;transform:translate3d(-40px,0,0) scale(.96)}
 .step-inner{width:100%;max-width:520px;margin:auto}
-/* ---------- Типографика ---------- */
 .eyebrow{font-size:12px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;color:var(--c-blue);margin-bottom:12px;text-shadow:0 0 18px rgba(90,210,255,.55)}
 .title-hero{font-size:clamp(30px,8.5vw,44px);line-height:1.06;font-weight:800;letter-spacing:-.5px;margin-bottom:16px}
 .title-step{font-size:clamp(24px,7vw,34px);line-height:1.12;font-weight:800;letter-spacing:-.4px;margin-bottom:18px}
 .subtitle{font-size:16px;line-height:1.55;color:var(--c-mut);font-weight:500;margin-bottom:28px}
 .lead{font-size:15.5px;line-height:1.6;color:var(--c-mut);margin-bottom:22px}
 .note{font-size:14px;line-height:1.5;color:var(--c-faint);margin-top:18px;text-align:center}
-/* ---------- Кнопки ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:none;cursor:pointer;font-family:inherit;font-weight:700;font-size:16px;border-radius:var(--rad-lg);padding:16px 26px;color:var(--c-ink);transition:transform .18s var(--ease),box-shadow .25s var(--ease),filter .2s;user-select:none}
 .btn:active{transform:scale(.96)}
 .btn--primary{background:var(--grad-main);color:#0a0e2e;box-shadow:0 10px 30px -8px rgba(255,61,127,.6),0 6px 22px -8px rgba(90,210,255,.5)}
@@ -89,18 +84,18 @@ body{
 .intro{text-align:center;display:flex;flex-direction:column;align-items:center}
 .badge-icon{margin-bottom:22px;filter:drop-shadow(0 10px 30px rgba(138,107,255,.5));animation:float 5s ease-in-out infinite}
 .intro .btn{margin-top:6px}
-/* ---------- Карточки (шаг 1) ---------- */
+/* ---------- (шаг 1) ---------- */
 .card-list{display:grid;gap:14px}
 .card{background:var(--card-bg);border:1px solid var(--card-brd);border-radius:var(--rad-lg);padding:20px 20px 20px 22px;box-shadow:var(--shadow-soft);backdrop-filter:blur(8px)}
 .card-icon{width:50px;height:50px;border-radius:var(--rad-md);display:flex;align-items:center;justify-content:center;margin-bottom:14px;background:rgba(255,255,255,.06);border:1px solid var(--card-brd)}
 .card h3{font-size:17px;font-weight:800;margin-bottom:6px}
 .card p{font-size:14.5px;line-height:1.55;color:var(--c-mut)}
-/* ---------- Схема (шаг 2) ---------- */
+/* ---------- (шаг 2) ---------- */
 .scheme{display:flex;flex-direction:column;align-items:center;margin-top:6px}
 .scheme-node{display:flex;flex-direction:column;align-items:center;gap:10px;background:var(--card-bg);border:1px solid var(--card-brd);padding:16px 30px;border-radius:var(--rad-md);box-shadow:var(--shadow-soft);min-width:168px;font-weight:700;font-size:15px}
 .scheme-icon{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.06);border:1px solid var(--card-brd)}
 .scheme-arrow{color:var(--c-purple);padding:8px 0}
-/* ---------- Проверка (шаг 3) ---------- */
+/* ---------- (шаг 3) ---------- */
 .check-list{list-style:none;display:grid;gap:12px}
 .check-item{display:flex;align-items:flex-start;gap:14px;background:var(--card-bg);border:1px solid var(--card-brd);padding:16px 16px 16px 18px;border-radius:var(--rad-md);font-size:15px;line-height:1.45;font-weight:600;box-shadow:var(--shadow-soft)}
 .check-dot{flex:0 0 auto;width:22px;height:22px;border-radius:50%;margin-top:1px;background:rgba(90,210,255,.16);border:1px solid rgba(90,210,255,.7);position:relative}
@@ -113,16 +108,16 @@ body{
 .rules-chip--warn{color:#ffd166;background:rgba(255,180,60,.14);border:1px solid rgba(255,180,60,.5)}
 .rules-chip--ok{color:#5ef7b2;background:rgba(60,255,160,.12);border:1px solid rgba(60,255,160,.5)}
 .rules-row p{font-size:14px;line-height:1.5;color:var(--c-mut)}
-/* ---------- Характеристики (шаг 4) ---------- */
+/* ---------- (шаг 4) ---------- */
 .spec-list{display:grid;gap:11px}
 .spec-item{display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--card-bg);border:1px solid var(--card-brd);padding:16px 18px;border-radius:var(--rad-md);box-shadow:var(--shadow-soft)}
 .spec-label{font-size:15px;color:var(--c-mut);font-weight:600}
 .spec-value{font-size:16px;font-weight:800;color:var(--c-ink);text-align:right;white-space:nowrap}
-/* ---------- Чек-лист обслуживания (шаг 5) ---------- */
+/* ---------- (шаг 5) ---------- */
 .checklist-mini{list-style:none;display:grid;gap:11px;margin-top:4px}
 .checklist-mini__item{display:flex;align-items:center;gap:14px;background:var(--card-bg);border:1px solid var(--card-brd);padding:15px 16px;border-radius:var(--rad-md);box-shadow:var(--shadow-soft);font-size:15px;line-height:1.4;font-weight:600}
 .checklist-mini__item .num{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#0a0e2e;background:var(--grad-main)}
-/* ---------- Плашка «конец сезона» (шаг 6) ---------- */
+/* ---------- (шаг 6) ---------- */
 .season-tip{
   display:flex;align-items:flex-start;gap:12px;
   background:linear-gradient(150deg,rgba(255,61,127,.18),rgba(255,161,52,.10));
@@ -134,18 +129,18 @@ body{
 .season-tip svg{flex:0 0 auto;color:#ff5c94;margin-top:1px}
 .season-tip__label{display:block;font-weight:800;font-size:15.5px;line-height:1.4;color:#ffe1ec}
 .season-tip__sub{display:block;font-size:14px;line-height:1.45;color:#ffc3d6;margin-top:2px}
-/* ---------- Цена (шаг 6) ---------- */
+/* ---------- (шаг 6) ---------- */
 .price-card{background:linear-gradient(170deg,rgba(90,210,255,.14),rgba(138,107,255,.10));border:1px solid rgba(138,107,255,.4);border-radius:var(--rad-lg);padding:24px;text-align:center;box-shadow:var(--shadow-soft);margin-bottom:22px}
 .price-tag{display:block;font-size:clamp(30px,9vw,40px);font-weight:800;background:var(--grad-main);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.5px}
 .price-note{font-size:13.5px;color:var(--c-mut);margin-top:8px}
 .price-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(138,107,255,.6),transparent);margin:18px 0}
 .price-installment{display:flex;align-items:center;justify-content:center;gap:10px;font-size:15px;font-weight:700}
 .cta-buy{margin-top:6px}
-/* ---------- Юмор (шаг 7) ---------- */
+/* ---------- (шаг 7) ---------- */
 .joke-card{background:var(--card-bg);border:1px solid var(--card-brd);border-radius:var(--rad-lg);padding:22px;box-shadow:var(--shadow-soft);margin-bottom:22px}
 .joke-quote{margin-bottom:12px;opacity:.9}
 .joke-card p{font-size:15.5px;line-height:1.65;color:var(--c-ink)}
-/* ---------- Фото KUGOO WISH 2 PRO (шаг 7) ---------- */
+/* ---------- (шаг 7) ---------- */
 .product-shot{margin:0 auto 22px;max-width:480px;border-radius:var(--rad-lg);overflow:hidden;border:1px solid rgba(138,107,255,.45);box-shadow:0 0 0 1px rgba(90,210,255,.25),0 0 34px -12px rgba(255,61,127,.55),var(--shadow-soft)}
 .product-shot img{display:block;width:100%;height:auto;border-radius:var(--rad-lg)}
 .product-shot figcaption{padding:10px 12px;font-size:13px;font-weight:700;text-align:center;letter-spacing:.4px;color:var(--c-mut);background:linear-gradient(90deg,rgba(90,210,255,.14),rgba(138,107,255,.14),rgba(255,61,127,.14))}
