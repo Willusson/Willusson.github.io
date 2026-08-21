@@ -1,4 +1,3 @@
-/* ===== KUGOO WISH 2 PRO — Презентация для родителей ===== */
 (function () {
   'use strict';
 
